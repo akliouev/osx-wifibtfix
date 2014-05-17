@@ -1,8 +1,9 @@
 #!/bin/bash
 
 #Variables
-extra_dir="extra/"
 tmp_dir="/tmp/"
+current_dir=$(pwd)
+extra_dir="$current_dir/extra/"
 
 . ./lib/functions.sh
 

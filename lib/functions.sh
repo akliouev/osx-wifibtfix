@@ -8,5 +8,6 @@ function logging {
 function download {
 	link="$1"
 	logging "Downloading file from $1..."
-	sudo wget --directory-prefix=$tmp_dir $1
+	cd $tmp_dir
+	sudo curl -O $1
 }
