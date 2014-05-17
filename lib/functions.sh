@@ -11,3 +11,11 @@ function download {
 	cd $tmp_dir
 	sudo curl -O $1
 }
+
+function check_root {
+	#Check if the script is run as root
+	if [ "$(id -u)" -eq 0 ];then
+        	logging "Script as been executed as root, please run it again as a user (without sudo)"
+        	exit 1
+	fi
+}

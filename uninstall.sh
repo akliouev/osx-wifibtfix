@@ -1,6 +1,16 @@
 #!/bin/bash
 
+current_dir=$(dirname "${BASH_SOURCE[0]}")
+
+#Validating current dir
+if [ "$current_dir" == "." ] || [ "$current_dir" == "./" ];then
+        current_dir=$(pwd)
+fi
+
+cd $current_dir
 . ./lib/functions.sh
+
+check_root
 
 logging "Uninstalling blueutil..."
 sudo rm /usr/local/bin/blueutil

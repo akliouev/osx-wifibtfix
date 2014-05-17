@@ -2,12 +2,20 @@
 
 #Variables
 tmp_dir="/tmp/"
-current_dir=$(pwd)
+current_dir=$(dirname $0)
+
+#Validating current dir
+if [ "$current_dir" == "." ] || [ "$current_dir" == "./" ];then
+	current_dir=$(pwd)
+fi
+
+cd $current_dir
+. ./lib/functions.sh
 extra_dir="$current_dir/extra/"
 
-. ./lib/functions.sh
-
 logging "Installing Wifi/BT fix by Setsuna666..."
+
+check_root
 
 logging "Downloading SleepWatcher..."
 download http://www.bernhard-baehr.de/sleepwatcher_2.2.tgz
