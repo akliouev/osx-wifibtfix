@@ -4,7 +4,7 @@
 extra_dir="extra/"
 tmp_dir="/tmp/"
 
-. ./lib/function.sh
+. ./lib/functions.sh
 
 logging "Installing Wifi/BT fix by Setsuna666..."
 
