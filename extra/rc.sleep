@@ -1,0 +1,9 @@
+#!/bin/bash
+
+log_file="btwififix.log"
+
+echo "$(date) Running script on sleep..." >> ~/$log_file
+/usr/local/bin/blueutil off
+
+
+exit 0
